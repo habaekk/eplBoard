@@ -10,11 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            List(schedules){ schedule in
-                NavigationLink(schedule.title, value: schedule)
+            List(informations){ information in
+                NavigationLink(information.title, value: information)
             }
-            .navigationDestination(for: Schedule.self) { schedule in
-                ScheduleView(schedule: schedule)
+            .navigationDestination(for: Information.self) { information in
+                InformationView(information: information)
             }
         }
     }
@@ -27,13 +27,13 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-struct Schedule: Hashable, Identifiable {
+struct Information: Hashable, Identifiable {
     let id: String
     let title: String
 }
 
-let schedules = [
-    Schedule(id: "1", title: "Tottenham"),
-    Schedule(id: "2", title: "B"),
-    Schedule(id: "3", title: "C")
+let informations = [
+    Information(id: "1", title: "Celtic"),
+    Information(id: "2", title: "Rangers"),
+    Information(id: "3", title: "Hearts")
 ]

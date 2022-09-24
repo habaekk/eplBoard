@@ -17,4 +17,16 @@ struct urlManager {
         let temp_url = "https://soccer.sportmonks.com/api/v2.0/teams/season/\(K.api.season_id_premiership_2022_2023)"
         return attach_api_token(temp_url)
     }
+    
+    func search_team_by_name(_ team_name: String) -> String {
+        let temp_url = "https://soccer.sportmonks.com/api/v2.0/teams/search/\(team_name)"
+        return attach_api_token(temp_url)
+    }
+    
+    func get_standings_by_season_id() -> String {
+        let temp_url = "https://soccer.sportmonks.com/api/v2.0/standings/season/\(K.api.season_id_premiership_2022_2023)"
+        return attach_api_token(temp_url)
+    }
+    
+    
 }

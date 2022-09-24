@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ScheduleView: View {
-    let schedule: Schedule
+struct InformationView: View {
+    let information: Information
     var body: some View {
-        Text(schedule.title)
+        Text(information.title)
     }
 }
 
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleView(schedule: Schedule(id: "0", title: "Z"))
+        InformationView(information: Information(id: "0", title: "Z"))
     }
 }
