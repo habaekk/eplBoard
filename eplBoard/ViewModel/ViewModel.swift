@@ -8,7 +8,5 @@
 import Foundation
 
 struct ViewModel {
-    func team_information(_ team_name: String) -> Int {
-        return 0
-    }
+    
 }
