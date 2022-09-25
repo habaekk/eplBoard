@@ -28,9 +28,13 @@ class ViewModel {
                 
                 if let safeData = data {
                     if let teams = self.parseJSON(safeData) {
-                        let id = String(teams.data[0].id)
-                        let title = teams.data[0].name
-                        let info = Information(id: id, title: title)
+                        let id: Int = teams.data[0].id
+                        let title: String = teams.data[0].name
+                        let short_code: String = teams.data[0].short_code
+                        let founded: Int = Int(teams.data[0].founded)!
+                        let logo_path: String = teams.data[0].logo_path
+                        let current_season_id: Int = teams.data[0].current_season_id
+                        let info = Information(id: id, title: title, short_code: short_code, founded: founded, logo_path: logo_path, current_season_id: current_season_id)
                         self.delegate?.didUpdateFootball(self, information: info)
                         
                     }

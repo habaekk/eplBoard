@@ -31,7 +31,7 @@ struct InformationView: View, FootballDelegate {
     }
     
     
-    func didUpdateFootball(_ viewmodel: ViewModel, teamDetail: TeamDetail) {
+    func didUpdateFootball(_ viewmodel: ViewModel, information: Information) {
         let a = 1
     }
     
@@ -43,6 +43,6 @@ struct InformationView: View, FootballDelegate {
 
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationView(information: Information(id: "0", title: "Z"))
+        InformationView(information: Information())
     }
 }

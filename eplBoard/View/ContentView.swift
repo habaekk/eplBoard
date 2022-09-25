@@ -30,7 +30,5 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 let informations = [
-    Information(id: "1", title: "Celtic"),
-    Information(id: "2", title: "Rangers"),
-    Information(id: "3", title: "Hearts")
+    Information()
 ]
