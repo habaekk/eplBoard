@@ -10,7 +10,7 @@ import Foundation
 struct urlManager {
     
     func attach_api_token(_ url: String) -> String {
-        return "\(url)?\(token.api_token)"
+        return "\(url)?api_token=\(token.api_token)"
     }
     
     func get_teams_by_season_id() -> String {

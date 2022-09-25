@@ -11,28 +11,29 @@ struct InformationView: View, FootballDelegate {
     
     var viewModel = ViewModel()
     
-    let information: Information
+    @State var information: Information
     
     
     var body: some View {
         VStack {
             Text(information.title)
-                .onAppear {
-                    viewModel.delegate = self
-                    viewModel.performRequest(with: "www")
-            }
-            Text("id")
-            Text("name")
-            Text("short_code")
-            Text("founded")
-            AsyncImage(url: URL(string: "https://www.hackingwithswift.com/img/paul.png"))
+            Text(String(information.id))
+            Text(information.short_code)
+            Text(String(information.founded))
+            Text(String(information.current_season_id))
+            AsyncImage(url: URL(string: information.logo_path))
+        }
+        .onAppear {
+            viewModel.delegate = self
+            print("appear")
+            viewModel.fetchTeamInformation(of: information.title)
         }
         
     }
     
     
     func didUpdateFootball(_ viewmodel: ViewModel, information: Information) {
-        let a = 1
+        self.information = information
     }
     
     func didFailWithError(error: Error) {
