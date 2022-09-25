@@ -62,4 +62,9 @@ class ViewModel {
         performRequest(with: temp_url)
     }
     
+    func fetchTeamStandings() {
+        let temp_url = urlFetcher.get_standings_by_season_id()
+        
+    }
+    
 }

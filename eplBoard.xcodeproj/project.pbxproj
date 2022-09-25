@@ -19,6 +19,7 @@
 		57B80EC528DF0DA5006234AE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80EC428DF0DA5006234AE /* Token.swift */; };
 		57B80EC728DF8EEF006234AE /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80EC628DF8EEF006234AE /* TeamDetail.swift */; };
 		57B80ECD28E0988F006234AE /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80ECC28E0988F006234AE /* Information.swift */; };
+		57B80ECF28E0C57B006234AE /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80ECE28E0C57B006234AE /* Standings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		57B80EC428DF0DA5006234AE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		57B80EC628DF8EEF006234AE /* TeamDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
 		57B80ECC28E0988F006234AE /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		57B80ECE28E0C57B006234AE /* Standings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				57B80EC428DF0DA5006234AE /* Token.swift */,
 				57B80EC628DF8EEF006234AE /* TeamDetail.swift */,
 				57B80ECC28E0988F006234AE /* Information.swift */,
+				57B80ECE28E0C57B006234AE /* Standings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				57B80EBC28DC3D47006234AE /* InformationView.swift in Sources */,
 				57B80EB928DC2EFA006234AE /* api.swift in Sources */,
 				57B80EBF28DF07D8006234AE /* ViewModel.swift in Sources */,
+				57B80ECF28E0C57B006234AE /* Standings.swift in Sources */,
 				57B80ECD28E0988F006234AE /* Information.swift in Sources */,
 				57B80EAA28DC23B0006234AE /* eplBoardApp.swift in Sources */,
 				57B80EC128DF08A8006234AE /* Constants.swift in Sources */,
