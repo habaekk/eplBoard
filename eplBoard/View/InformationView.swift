@@ -7,11 +7,39 @@
 
 import SwiftUI
 
-struct InformationView: View {
+struct InformationView: View, FootballDelegate {
+    
+    var viewModel = ViewModel()
+    
     let information: Information
+    
+    
     var body: some View {
-        Text(information.title)
+        VStack {
+            Text(information.title)
+                .onAppear {
+                    viewModel.delegate = self
+                    viewModel.performRequest(with: "www")
+            }
+            Text("id")
+            Text("name")
+            Text("short_code")
+            Text("founded")
+            Text("Image")
+            
+        }
+        
     }
+    
+    
+    func didUpdateFootball(_ viewmodel: ViewModel, teamDetail: TeamDetail) {
+        let a = 1
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
 }
 
 struct ScheduleView_Previews: PreviewProvider {

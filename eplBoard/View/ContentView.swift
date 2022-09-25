@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var viewModel = ViewModel()
+    
     var body: some View {
         NavigationStack {
             List(informations){ information in
