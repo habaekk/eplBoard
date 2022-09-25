@@ -25,8 +25,7 @@ struct InformationView: View, FootballDelegate {
             Text("name")
             Text("short_code")
             Text("founded")
-            Text("Image")
-            
+            AsyncImage(url: URL(string: "https://www.hackingwithswift.com/img/paul.png"))
         }
         
     }

@@ -20,6 +20,7 @@
 		57B80EC728DF8EEF006234AE /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80EC628DF8EEF006234AE /* TeamDetail.swift */; };
 		57B80EC928DF91E5006234AE /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80EC828DF91E5006234AE /* Parsing.swift */; };
 		57B80ECB28DF9552006234AE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80ECA28DF9552006234AE /* Request.swift */; };
+		57B80ECD28E0988F006234AE /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B80ECC28E0988F006234AE /* Information.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		57B80EC628DF8EEF006234AE /* TeamDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
 		57B80EC828DF91E5006234AE /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		57B80ECA28DF9552006234AE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		57B80ECC28E0988F006234AE /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				57B80EC628DF8EEF006234AE /* TeamDetail.swift */,
 				57B80EC828DF91E5006234AE /* Parsing.swift */,
 				57B80ECA28DF9552006234AE /* Request.swift */,
+				57B80ECC28E0988F006234AE /* Information.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				57B80EB928DC2EFA006234AE /* api.swift in Sources */,
 				57B80ECB28DF9552006234AE /* Request.swift in Sources */,
 				57B80EBF28DF07D8006234AE /* ViewModel.swift in Sources */,
+				57B80ECD28E0988F006234AE /* Information.swift in Sources */,
 				57B80EAA28DC23B0006234AE /* eplBoardApp.swift in Sources */,
 				57B80EC928DF91E5006234AE /* Parsing.swift in Sources */,
 				57B80EC128DF08A8006234AE /* Constants.swift in Sources */,

@@ -29,12 +29,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
-struct Information: Hashable, Identifiable {
-    let id: String
-    let title: String
-}
-
 let informations = [
     Information(id: "1", title: "Celtic"),
     Information(id: "2", title: "Rangers"),
