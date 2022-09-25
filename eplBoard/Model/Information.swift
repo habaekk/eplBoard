@@ -12,6 +12,6 @@ struct Information: Hashable, Identifiable {
     var title: String = "Celtic"
     var short_code: String = "SHORT_CODE"
     var founded: Int = 2022
-    var logo_path: String =  "https://cdn.sportmonks.com/images/soccer/teams/21/53.png"
+    var logo_path: String =  "https://www.hackingwithswift.com/img/paul.png"
     var current_season_id: Int = 0
 }

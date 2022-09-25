@@ -59,7 +59,6 @@ class ViewModel {
 
     func fetchTeamInformation(of teamName: String) {
         let temp_url = urlFetcher.search_team_by_name(teamName)
-        print(temp_url)
         performRequest(with: temp_url)
     }
     
