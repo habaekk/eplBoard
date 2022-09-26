@@ -10,7 +10,7 @@ import Foundation
 struct TeamDetail: Codable {
     var id: Int
     var name: String
-    var short_code: String
+//    var short_code?: String
     var founded: Int
     var logo_path: String
     var current_season_id: Int

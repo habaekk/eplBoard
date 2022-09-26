@@ -9,6 +9,7 @@ import Foundation
 
 protocol FootballDelegate {
     func didUpdateFootball(_ viewmodel: ViewModel, information: Information)
+    func didUpdateFootball(_ viewmodel: ViewModel, teamInfo: TeamInfo)
     func didFailWithError(error: Error)
 
 }
@@ -33,12 +34,11 @@ class ViewModel {
                         let id: Int = teams.data[0].id
                         let title: String = teams.data[0].name
 //                        let short_code: String = teams.data[0].short_code
-//                        let founded: Int = teams.data[0].founded
-//                        let logo_path: String = teams.data[0].logo_path
-//                        let current_season_id: Int = teams.data[0].current_season_id
-                        let info = Information(id: id, title: title)
-//                        let info = Information(id: id, title: title, short_code: short_code, founded: founded, logo_path: logo_path, current_season_id: current_season_id)
-                        self.delegate?.didUpdateFootball(self, information: info)
+                        let founded: Int = teams.data[0].founded
+                        let logo_path: String = teams.data[0].logo_path
+                        let current_season_id: Int = teams.data[0].current_season_id
+                        let info = TeamInfo(id: id, title: title, founded: founded, logo_path: logo_path, current_season_id: current_season_id)
+                        self.delegate?.didUpdateFootball(self, teamInfo: info)
                         
                     }
                 }

@@ -19,22 +19,22 @@ struct ContentView: View, FootballDelegate{
                 NavigationLink(information.title, value: information)
             }
             .navigationDestination(for: Information.self) { information in
-                InformationView(information: information)
+                InformationView(teamInfo: TeamInfo(), information: information)
             }
         }.onAppear {
             viewModel.delegate = self
-            print("appear")
             viewModel.fetchTeamStandings()
         }
         
     }
     
     func didUpdateFootball(_ viewmodel: ViewModel, information: Information) {
-        print("delegate")
         viewModel.appendInformation(information)
         progress += 1/12
+    }
+    
+    func didUpdateFootball(_ viewmodel: ViewModel, teamInfo: TeamInfo) {
         
-        print(informations)
     }
     
     func didFailWithError(error: Error) {
