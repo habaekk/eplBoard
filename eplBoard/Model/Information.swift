@@ -15,3 +15,7 @@ struct Information: Hashable, Identifiable {
     var logo_path: String =  "https://www.hackingwithswift.com/img/paul.png"
     var current_season_id: Int = 0
 }
+
+let informations = [
+    Information()
+]

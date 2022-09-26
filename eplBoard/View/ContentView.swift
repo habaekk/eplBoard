@@ -30,6 +30,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-let informations = [
-    Information()
-]
