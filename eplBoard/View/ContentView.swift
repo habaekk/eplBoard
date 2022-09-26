@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View, FootballDelegate{
     
+    @State private var progress = 0.0
     var viewModel = ViewModel()
     
     var body: some View {
+        ProgressView(value: progress)
         NavigationStack {
             List(informations){ information in
                 NavigationLink(information.title, value: information)
@@ -19,7 +21,24 @@ struct ContentView: View {
             .navigationDestination(for: Information.self) { information in
                 InformationView(information: information)
             }
+        }.onAppear {
+            viewModel.delegate = self
+            print("appear")
+            viewModel.fetchTeamStandings()
         }
+        
+    }
+    
+    func didUpdateFootball(_ viewmodel: ViewModel, information: Information) {
+        print("delegate")
+        viewModel.appendInformation(information)
+        progress += 1/12
+        
+        print(informations)
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }
 
