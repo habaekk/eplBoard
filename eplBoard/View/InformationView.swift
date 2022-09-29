@@ -11,17 +11,20 @@ struct InformationView: View, FootballDelegate {
     
     var viewModel = ViewModel()
     
+    @ObservedObject private var show = Show()
     @State var teamInfo: TeamInfo
     @State var information: Information
     
     var body: some View {
         VStack {
-            Text(teamInfo.title)
-            Text(String(teamInfo.id))
-            Text(teamInfo.short_code)
-            Text(String(teamInfo.founded))
-            Text(String(teamInfo.current_season_id))
-            AsyncImage(url: URL(string: teamInfo.logo_path))
+            Text(information.title)
+            if show.show {
+                Text(String(teamInfo.id))
+//                Text(teamInfo.short_code)
+                Text(String(teamInfo.founded))
+                Text(String(teamInfo.current_season_id))
+                AsyncImage(url: URL(string: teamInfo.logo_path))
+            }
         }
         .onAppear {
             viewModel.delegate = self
@@ -29,12 +32,17 @@ struct InformationView: View, FootballDelegate {
         }
     }
     
+    
     func didUpdateFootball(_ viewmodel: ViewModel, information: Information) {
         
     }
     
     func didUpdateFootball(_ viewmodel: ViewModel, teamInfo: TeamInfo) {
         self.teamInfo = teamInfo
+        DispatchQueue.main.async {
+            show.show = true
+        }
+        
     }
     
     func didFailWithError(error: Error) {
@@ -46,4 +54,8 @@ struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         InformationView(teamInfo: TeamInfo(), information: Information())
     }
+}
+
+class Show: ObservableObject {
+    @Published var show: Bool = false
 }
