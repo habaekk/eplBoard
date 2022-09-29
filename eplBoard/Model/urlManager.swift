@@ -19,7 +19,8 @@ struct urlManager {
     }
     
     func search_team_by_name(_ team_name: String) -> String {
-        let temp_url = "https://soccer.sportmonks.com/api/v2.0/teams/search/\(team_name)"
+        let name = team_name.replacingOccurrences(of: " ", with: "%20")
+        let temp_url = "https://soccer.sportmonks.com/api/v2.0/teams/search/\(name)"
         return attach_api_token(temp_url)
     }
     
